@@ -1,0 +1,26 @@
+<h1>To do list</h1>
+<h4>Dia: {{ fecha }}</h4><br>
+<div id="agregarTareas">
+    <form #formTarea="ngForm" (ngSubmit)="crearTarea(formTarea)">
+        <input type="text" name="titulo" placeholder="Nombre de la tarea" [(ngModel)]="peticion.documentos.titulo">
+        <textarea name="des" placeholder="Descripcion..." [(ngModel)]="peticion.documentos.des"></textarea>
+        <input type="text" placeholder="Etiqueta" name="etiqueta" [(ngModel)]="peticion.documentos.etiqueta">
+        <input type="hidden" name="_id" [(ngModel)]="peticion.documentos._id">
+        <div id="divBoton">
+            <button type="submit">Agregar</button>
+        </div>
+    </form>
+</div>
+<div id="containertareas"><hr>
+    <div class="rowTareas" *ngFor="let tareas of peticion.tareas">
+        <div>
+            <input type="checkbox">
+            <label><strong>{{ tareas.titulo }}</strong></label><br>
+        </div>
+        <p>{{ tareas.des }}</p>
+        <div class="divBoton">
+            <button type="button" id="eliminar" (click)="eliminarTarea(tareas._id, tareas.titulo)">X</button>&nbsp;
+            <button type="button" (click)="cargarCampos(tareas)">Modificar</button>
+        </div><hr>
+    </div>
+</div>

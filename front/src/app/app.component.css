@@ -1,0 +1,33 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}#agregarTareas{
+    display: flex; flex-flow: column wrap;
+}#agregarTareas form{
+    display: flex; flex-flow: column wrap; height: 310px; width: 100%; padding-bottom: 15px; justify-content: space-around;
+}#agregarTareas input, #agregarTareas div, textarea{
+    height: 30px;
+}#divBoton{
+    display: flex; flex-flow: column wrap; justify-content: end; width: 100%;
+}#divBoton button{
+    align-self: flex-end;
+    margin-right: 10px;
+    font-size: 15px;
+}#agregarTareas input, textarea{
+    border: none; border-bottom: 1px solid blue; font-size: 15px; outline: none;
+}input:focus::placeholder, textarea:focus::placeholder{
+    color: blue
+}.divBoton{
+    display: flex; flex-flow: row wrap; justify-content:end ; width: 100%;
+}.divBoton{
+    font-size: 15px;
+}button{
+    background-color: white;
+    border: 1px solid blue;
+    border-radius: 5px;
+}#eliminar{
+    color: red;
+    border: 1px solid red;
+    transition: all 0.1s ease 0s;
+}#eliminar:hover{
+    background-color: rgb(255, 209, 209);
+}
