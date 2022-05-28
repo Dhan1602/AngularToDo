@@ -23,8 +23,8 @@ export class PeticionesService {
   crear(cuerpo: any) {
     return this.http.post("http://localhost:3000/tarea", cuerpo);
   }
-  editar(id: any, cuerpo: any) {
-    return this.http.post("http://localhost:3000/tarea/" + id, cuerpo);
+  editar(form: Tareas) {
+    return this.http.post("http://localhost:3000/tarea/" + form._id, form);
   }
   eliminar(id: any) {
     return this.http.delete("http://localhost:3000/tarea/" + id);

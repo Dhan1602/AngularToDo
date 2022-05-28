@@ -25,7 +25,16 @@ export class AppComponent {
     });
   }
   crearTarea(form: NgForm) {
-    console.log(form.value);
+    if (form.value._id != null) {
+      this.peticion.editar(form.value).subscribe(ok => {
+        this.cargarTareas();
+        form.reset();
+      }, error => {
+        console.log(error);
+      })
+      form.reset();
+    } else {
+      console.log(form.value);
       form.value.fecha = this.fecha;
       this.peticion.crear(form.value).subscribe(ok => {
         this.cargarTareas();
@@ -33,6 +42,7 @@ export class AppComponent {
       }, error => {
         console.log(error);
       })
+    }
   }
 
   cargarCampos(campos: Tareas) {

@@ -30,4 +30,7 @@
     transition: all 0.1s ease 0s;
 }#eliminar:hover{
     background-color: rgb(255, 209, 209);
+}#labelfecha{
+    font-size: 14px;
+    color: rgb(1, 1, 126);
 }

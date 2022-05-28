@@ -14,8 +14,8 @@
 <div id="containertareas"><hr>
     <div class="rowTareas" *ngFor="let tareas of peticion.tareas">
         <div>
-            <input type="checkbox">
-            <label><strong>{{ tareas.titulo }}</strong></label><br>
+            <label><strong>- {{ tareas.titulo }}</strong></label><br>
+            <label id="labelfecha"><strong>{{ tareas.fecha }}</strong></label>
         </div>
         <p>{{ tareas.des }}</p>
         <div class="divBoton">
